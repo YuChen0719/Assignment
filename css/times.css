@@ -1,0 +1,224 @@
+/* 
+author: Yu Chen;
+filename: times.css;
+Date: The Date which you will submit;
+*/
+
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    line-height: 1.6;
+    font-family:Impact, Charcoal, sans-serif;
+    /*font-family: font stack required for body text */
+}
+h1, h2, h3, h4{
+    font-family:Georgia, serif;
+    /*font-family: font stack required for headings */
+}
+p{
+    
+}
+.container{
+    max-width: 1500px;
+    /*Set the whole page max-width to 1500px*/
+}
+.subnav{
+    display:flex;
+    flex-direction: column;
+    /*Set up flex-box for this class, and turn its items direction into vertical*/
+    align-items: flex-end;
+    /* Locate the navigation at the end of the rows*/
+    background-color:hsla(78, 90%, 66%, 0.52);
+    /*Set up the b.-c. color*/
+    box-shadow: 0px 10px hsla(19, 100%, 50%, 0.52);
+    /*Create a shadow for this box*/
+}
+.subnav a{
+    transition: 0.3s;
+    /*Animiation refection time*/
+    font-family: 'Ubuntu', sans-serif;
+    /*Set up the font for the text in this box*/
+}
+.subnav a:hover{
+    color:hsla(360, 100%, 100%, 1);
+    /*Provide a value for change*/
+}
+.mainnav{
+    display:flex;
+    justify-content:space-between;
+    /*Put the items into space-between form*/
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right:5rem;
+    /*Padding styled*/
+    text-align: center;
+    /*Arrange the text to centre area*/
+    font-weight:600;
+    /*Set the weight to this value*/
+    font-family: 'Rationale', sans-serif;
+    /*Set up the font for the text in this box*/   
+}
+.mainnav a{
+    transition:0.3s;
+    /*Offer a transition time*/
+    font-size: 2rem;
+    /*Reset the font size for the text in this class*/
+    text-align: center;
+    /*Move the text into centre area*/
+   
+}
+.mainnav a:hover{
+    color:hsla(201, 100%, 41%, 1);
+    /*After hover, changed the text color */
+    font-size: 2.5rem;
+    /*~~, change the font size*/
+    background-color: hsla(36, 81%, 50%, 0.75);
+    /*~~,change the background color*/
+    box-sizing: content-box;
+    /*~~,Offer a box to contain each navs with default size*/
+    width: 300px;
+    /*~~,set the width*/
+    height: 70px;    
+    /*~~,set the height*/
+    border-radius: 70%;
+    /*Modify the box shape*/
+}
+.masthead{
+    
+}
+.times-logo{
+}
+.masthead h1{
+    text-align: center;
+    /*Left the text to centre area */
+    padding: 25px;
+    /*Put padding value as 25px in general*/
+    color: hsla(225, 74%, 78%, 1);
+    /*Change the text color */
+    font-size: 4rem;
+    /*Change the font-size */
+    background-color:hsla(78, 90%, 66%, 0.52);
+    /*Offer the background-color */
+    box-shadow: 0px -10px hsla(19, 100%, 50%, 0.52);
+    /*offer box-shadow to this class */
+    transition:0.8s;
+    /* Set up the transition time*/
+    font-family: 'Cormorant SC', serif;
+    /* Set up the font style*/
+}
+.masthead h1:hover{
+    color: hsla(0, 0%, 0%, 1);
+    /*A hover for change the text color */
+}
+.content{
+    background-color: hsla(78, 90%, 66%, 0.52);
+    /*Set up the background color */
+    padding:10px;
+    /*Set padding into this value in general */
+    display: grid;
+    /*Put every items into grid which are included in this class*/
+    grid-gap:10px;
+     /* Make certain gaps between each grids*/
+    
+}
+.content .story{
+    background-color: hsla(360, 100%, 100%, 1);
+    /* Set the backgroud color*/
+    padding: 15px;
+    /*Set padding with this value in general */
+    grid-column-start: 1.1;
+    /*Arrange the column in the expected position */
+    border-style: dotted;
+    /*Decorate the border  */
+}
+.story.lead-story{
+    background-color: hsla(360, 100%, 100%, 1);
+    /*Set the backgroud color */
+    padding: 25px;
+    
+    grid-column-end: 1;
+    /*Make the column end at expected position*/
+    border-style: solid;
+    /*Decorted the border with solid line*/
+}
+h1.story-title{
+    font-size:40px;
+    text-shadow: 2px 2px hsla(0, 0%, 27%, 0.84);
+    /*Text shadow with the size and color*/
+    font-family: 'Lobster', cursive;
+    
+}
+.story img{
+    padding:5px;
+    border-radius:70%;
+}
+.story p{
+    text-align:center;
+    font-family: 'Pattaya', sans-serif;
+}
+.story blockquote{
+    quotes: "\201E" "\201D";
+}
+.story blockquote::before{
+    content: open-quote;
+}
+.story blockquote::after{
+    content: close-quote;
+}
+.story p.byline{
+    text-decoration-line: overline underline;
+    /*Put lines above and under the text*/
+    
+}
+p.byline span.author{
+    text-shadow: 5px 2px hsla(209, 100%, 20%, 0.72);
+    transition: 0.5s;
+}
+p.byline span.author:hover{
+    font-size: 25px;
+}
+p.byline span.pub{
+    text-shadow: 5px 2px hsla(209, 100%, 20%, 0.72);
+    padding-left:20px;
+}
+.foot{
+    
+}
+.foot p{
+    
+}
+@media only screen and (max-width: 600px) {
+    .content{
+        display:grid;
+        grid-template:auto / auto;
+        /*Turn that to proper size after minimize the screen*/
+    }
+    .times-logo{
+        height: 100px;
+        width:400px;
+    }
+    .content .story{
+        display:grid;
+        grid-column-start:1;
+        background-color: hsla(199, 38%, 61%, 0.74)
+    }
+    .content .lead-story {
+        background-color:hsla(104, 29%, 42%, 0.85);
+    }
+    .mainnav {
+        display: grid;
+        grid-template-rows: auto;
+        /*Switch the direction to vertical*/
+    }
+}
+
+.foot p{
+  font-family: Lato, "Lucida Grande", Tahoma, Sans-Serif;
+}
